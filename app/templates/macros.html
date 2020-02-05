@@ -1,0 +1,30 @@
+{% macro displayNewsHighlight(news_highlight) %}
+{%import 'macros.html' as macro%}
+
+    {% for news in news_highlight %}
+        <li>{{ news.title}}</li>
+        <div class="row">
+            <h1>article</h1>
+            <hr>
+
+            {%%if article}
+            {{macro.displayHighlight(article)}}
+
+            {%else%}
+            <h2 class="text-center">News article</h2>
+            <a class="btn btn-danger text-center" href="/news/article/new/{{news.id}}">Add a new highlight</a>
+            {%endif%}
+            <div class="col-md-6">
+                <li class="text-center">{{news.title|truncate(10)}}</li>
+            </div>
+    
+            {%macro displayingarticle(highlight_list)%}
+            {%article in article_list%}
+            <div class="col-md-6 article-card">
+                <h2>{{highlight.title}}</h2>
+                <p>{{highlight.highlight|truncate(35)}}</p>
+            </div>
+        </div>
+    {% endfor %}
+
+{% endmacro %}

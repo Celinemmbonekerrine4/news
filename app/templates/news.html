@@ -1,0 +1,22 @@
+<h1> Welcome To The News article {{id}}</h1>
+{% extends 'base.html'%}
+{% block content %}
+<div class="container">
+
+    
+    <div class="row">
+        <div class="col-md-6">
+        </div>
+
+        <div class="col-md-6">
+            <h3>{{ news.title }}</h3>
+
+            <p class="overview"> {{ news.overview }}</p>
+            <p class="ratings"> <b> {{ news.vote_average }}</b> - <i>{{ news.vote_count}} votes </i> </p>
+            <a class="ratings" href="/news/article/new/{{news.id}}">Post a new News Highlight</a>
+
+        </div>
+    </div>
+
+</div>
+{% endblock %}
