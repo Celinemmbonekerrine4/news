@@ -5,26 +5,28 @@
 
         <div class="container">
           <div class="jumbotron">
-            <div class="row">
-                <h1>article</h1>
-                <hr>
-    
-                <h2>News article</h2>
-                <a class="btn btn-danger text-center" href="/news/{{news.id}}">News Article</a>
-            
-                <div class="col-md-4">
-                    <li class="text-center">{{news.name|truncate(10)}}</li>
-                <!-- </div> -->
+            <div class="card">
+                <div class="row">
+                    <h1>article</h1>
+                    <hr>
+        
+                    <h2>News article</h2>
+                    <a class="btn btn-danger text-center" href="/news/{{news.id}}">News Article</a>
+                
+                    <div class="col-md-4">
+                        <li class="text-center">{{news.name|truncate(10)}}</li>
+                    <!-- </div> -->
+                </div>
+            {% endfor %}
+        
+        {% endmacro %}
+        
+        {%macro displayingarticle(article_list)%}
+            {%for article in article_list%}
+                <div class="col-md-4 article-card">
+                    <h2>{{article.name}}</h2>
+                    <p>{{article.article|truncate(10)}}</p>
             </div>
-        {% endfor %}
-    
-    {% endmacro %}
-    
-    {%macro displayingarticle(article_list)%}
-        {%for article in article_list%}
-            <div class="col-md-4 article-card">
-                <h2>{{article.name}}</h2>
-                <p>{{article.article|truncate(10)}}</p>
             </div>
         </div>
           </div>
