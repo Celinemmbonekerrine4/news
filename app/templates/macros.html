@@ -1,20 +1,24 @@
 {% macro displayNewsSources(news_sources) %}
 
     {% for news in news_sources %}
-        <li>{{ news.name}}</li>
+        <ul>
+            <li>{{ news.name}}</li>
+        </ul>
 
         <div class="container">
           <div class="jumbotron">
             <div class="card">
                 <div class="row">
-                    <h1>article</h1>
+                    <h1>Article</h1>
                     <hr>
         
-                    <h2>News article</h2>
+                    <h2>News Article</h2>
                     <a class="btn btn-danger text-center" href="/news/{{news.id}}">News Article</a>
                 
                     <div class="col-md-4">
-                        <li class="text-center">{{news.name|truncate(10)}}</li>
+                        <ul>
+                            <li class="text-center">{{news.name|truncate(10)}}</li>
+                        </ul>
                     <!-- </div> -->
                 </div>
             {% endfor %}
