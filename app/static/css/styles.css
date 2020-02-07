@@ -12,5 +12,6 @@ body{
 }
 div.jumbotron{
     background-color: cadetblue;
+    font-family: sans-serif;
 }
 
