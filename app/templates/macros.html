@@ -2,48 +2,30 @@
 
     
 {% for news in news_sources %}
+<div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 movie-card">
+        <h1>News</h1>
+        <ul>
+            <li class="">{{ news.name}}</li>
+        </ul>
+
+        <h2>Article</h2>
+        <a class="btn btn-danger text-center" href="/news/{{news.id}}">News Article</a>
+</div>
+
+{% endfor %}
+                    
+{% endmacro %}
 
 
 
 
 
-        <html>
-            <body>
-               
-        
-                <div class="container">
-                  <div class="jumbotron">
-                    <div class="card">
-                        <div class="row">
-                            <h1>News</h1>
-                            <ul>
-                                <li>{{ news.name}}</li>
-                            </ul>
-                
-                            <h2>Article</h2>
-                            <a class="btn btn-danger text-center" href="/news/{{news.id}}">News Article</a>
-                        
-                            <!-- <div class="col-md-6">
-                                <ul>
-                                    <li class="text-center">{{news.name|truncate(10)}}</li>
-                                </ul>
-                             </div> -->
-                        </div> 
-                    {% endfor %}
-                
-                {% endmacro %}
-                
-                {%macro displayingarticle(article_list)%}
-                    {%for article in article_list%}
-                        <div class="col-md-6 article-card">
-                            <h2>{{article.name}}</h2>
-                            <p>{{article.article|truncate(20)}}</p>
-                    </div>
-                    </div>
-                </div>
-                  </div>
-            {% endfor %}
-        {% endmacro %}
-        
-            </body>
-        </html>
+
+
+
+
+
+
+
+
+
