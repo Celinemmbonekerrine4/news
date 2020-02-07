@@ -1,7 +1,16 @@
 body{
+
+    overflow: hidden;
     background-color: burlywood;
-        margin: 0;
-        padding: 0;
+        margin: 0px 0px;
+        padding: 0px 0px;
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         color: #444;
+        
+        
+        
 }
+div.jumbotron{
+    background-color: cadetblue;
+}
+
