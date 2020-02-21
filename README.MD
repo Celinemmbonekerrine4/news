@@ -13,4 +13,6 @@ https://github.com/Celinemmbonekerrine4/news/issues
 # Heroku Access link
 <a href="https://newsarticlehighlights.herokuapp.com/">
 
+ # License
+Licensed under the  [MIT license](LICENSE).
 
