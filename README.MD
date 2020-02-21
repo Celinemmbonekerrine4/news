@@ -10,6 +10,7 @@ This website can be accessed with any browser like the *Google chrome*, *Fire fo
 # Known bugs
 This website has no bugs but when one is noticed access it by clicking the issues link:
 https://github.com/Celinemmbonekerrine4/news/issues
-# Access link
-<a href=">
+# Heroku Access link
+<a href="https://newsarticlehighlights.herokuapp.com/">
+
 
