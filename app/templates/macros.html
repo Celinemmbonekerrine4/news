@@ -3,10 +3,12 @@
     
 {% for news in news_sources %}
 <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 movie-card">
-        <h1>News</h1>
-        <ul>
-            <li class="">{{ news.name}}</li>
-        </ul>
+        
+       <h4>
+            <ul>
+                    <li class="">{{ news.name}}</li>
+                </ul>
+       </h4>
 
         <h2>Article</h2>
         <a class="btn btn-danger text-center" href="/news/{{news.id}}">News Article</a>
