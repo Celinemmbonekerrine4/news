@@ -1,5 +1,15 @@
-<h1> Welcome To The News article {{id}}</h1>
-    {% for article in articles %}
-        <p>{{article.name}}</p>
+{%extends 'base.html'%}
+{%block content%}
+
+{{super()}}
+<link rel="stylesheet" href="{{url_for('static',filename='css/news.css')}}"/>
+
+    <div class="arts">
+            <h1> Welcome To The News article {{id}}</h1>
+            <hr>
+        {% for article in articles %}
+        <h2>{{article.name}}</h2>
         <p>{{article.description}}</p>
     {% endfor %}
+    </div>
+{%endblock%}
